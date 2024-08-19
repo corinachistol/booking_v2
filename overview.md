@@ -13,7 +13,12 @@
                                          |
                                          +-- - gd / image processing      
                                          +-- + mysqlnd       
-                                         +-- - composer       
+                                         +-- + composer  (dev tool)  
+                                                  |
+                                                  +-- composer init
+                                                  +-- class autoloading
+                                                                index.php ---- require_once './vendor/autoload.php';
+                                                  +-- ...   
                                          +-- + zlib       
                                          +-- + ...       
     ? mysql/ maria
