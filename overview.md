@@ -40,3 +40,54 @@
     |                           |
     |                           |
     +---------------------------+
+
+
+
+## Composer lesson3 (simialr to npm-node)
+
+
+
+
+
+
+
+
+
+
+
+    - packaging management, install/update/delete dependencies
+    - genereaza scheletul proiectelor dupa standartul psr
+    - iti ofera posibilitatea de a gasi mai repede clasele si functiile, autoloading
+    - namespace
+
+
+    > make easier templating
+        * native php <tag><?= $variable ?></tag>
+            - complex syntax
+            - no universal language
+            - no blocks principle
+            - other DX features
+            - caching
+
+        * TEMPLATING ENGINE:
+            - twig (symfony, Drupal)
+            - blade (Laravel)
+            - wordpress (basics)
+
+
+    TEMPLATING ENGINE
+
+    [TEMPLATE/view] ---------> render() ------------> PAGE
+                                 ^
+                                 |
+                                 data + expressions 
+
+
+
+
+
+    compsoer require <vendor_id>/<package_id> 
+                                    ^
+                                    |
+                                    +----- download dependencies
+    
