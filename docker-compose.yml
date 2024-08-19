@@ -1,0 +1,16 @@
+
+version: '3.4'
+
+services:
+  php-container: 
+    # image: php:8.3-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: 'no'
+
+    volumes:
+      - ./website:/var/www/html
+
+    ports:
+      - 8088:80
