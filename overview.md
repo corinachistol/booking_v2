@@ -90,4 +90,29 @@
                                     ^
                                     |
                                     +----- download dependencies
+
+
+
+
+
+
+
+## lesson4
+
+pattern: S.O.L.I.D. (OOP)
+pattern: MVTemplate (MVController)
+pattern:...
+
+    > templating
     
+
+
+
+
+
+
+
+
+
+
+BROWSER ---> res (HTML) <------- twig render('home.html.twig) <------ data <----- mysqli <------ docker <---- mariadb server

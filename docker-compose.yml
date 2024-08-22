@@ -14,3 +14,19 @@ services:
 
     ports:
       - 8088:80
+
+
+  mariadb-container:
+    image: mariadb
+    restart: 'no'
+    environment:
+      MARIADB_DATABASE: booking
+      MARIADB_USER: booking
+      MARIADB_PASSWORD: booking
+      MARIADB_ROOT_PASSWORD: booking
+    
+    ports:
+      - 13306:3306
+  
+    volumes:
+      - ./data:/var/lib/mysql
