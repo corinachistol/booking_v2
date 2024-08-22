@@ -4,6 +4,7 @@ version: '3.4'
 services:
   php-container: 
     # image: php:8.3-apache
+    container_name: booking_php
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,9 +15,13 @@ services:
 
     ports:
       - 8088:80
+    
+    networks:
+      - booking-net
 
 
   mariadb-container:
+    container_name: booking_mariadb
     image: mariadb
     restart: 'no'
     environment:
@@ -30,3 +35,8 @@ services:
   
     volumes:
       - ./data:/var/lib/mysql
+    networks:
+      - booking-net
+  
+networks:
+  booking-net:

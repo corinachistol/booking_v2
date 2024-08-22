@@ -116,3 +116,32 @@ pattern:...
 
 
 BROWSER ---> res (HTML) <------- twig render('home.html.twig) <------ data <----- mysqli <------ docker <---- mariadb server
+                                                                                                                    ^
+                                                                                                                    |
+                                                                                                                booking 
+                                                                                                                    ^
+                                                                                                                    |
+                                                                                                                tours
+                                                                                                                    |
+                                                                                                                data
+
+
+
+
+
+
+
++-----------------------------------------------------+
+|                                                     |
+|      host machine                                               |
+|                                                     |  localhost     <---- 13306:3306 --> [mariadb] / booking_mariadb
+|                                                     |                                       ^
+                                                                                              |
+                                                                                              booking-net
+                                                                                              |
+                                                                                              v
+|                                         |                             <---- 8088:80 -----> [php]  booking_php
+|                                                     |                                       ^
+|                                                     |                                       |
+|                                                     |                                     PDO['localhost']
++-----------------------------------------------------+
