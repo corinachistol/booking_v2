@@ -1,37 +1,30 @@
 <?
-    // phpinfo();
-    // die();
-    //for class autoloading,do not remove!
-    require_once './vendor/autoload.php';
+   require_once './src/bootstrap.php';
 
-    //Twig init +  config
-    $loader = new \Twig\Loader\FilesystemLoader('./templates');
+   $page = $_GET['page'] ?? '';
 
-    $twig = new \Twig\Environment($loader, [
-        // 'cache' => '/path/to/compilation_cache',
-    ]);
+   //HW1: try to use switch/case - git branch with this code
+   if($page === 'home') {
 
-    
-    // connect to database / fetch data - mysqli
-    // PHP 8.2 + only mysql pdo / no mysqli
-    $pdo = new PDO("mysql:host=booking_mariadb;port=3306;dbname=booking", "booking", "booking");
+      $tours = getData(data: 'tours');
+      $title = 'Our Fall Tours';
+      renderPage($title, 'home', $tours);
 
-    $stmt = $pdo->query('SELECT * FROM tours');
+   } else if($page === 'reviews'){
 
-    $tours = [];
-
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $tours[] = $row;
-    }
-
-    // var_dump($tours);
-    // die();
+      $reviews = getData('reviews');
+      $title = 'What people think';
+      renderPage($title,'reviews,', $reviews );
+      
+   } else{
+      
+     renderPage("The page you are looking for was not found", '404');
+   }
 
 
-    //render a simple page
-    $template = $twig->load('home.html.twig');
 
-    print($template->render([
-        'title' => $title,
-        'tours' => $tours
-    ]));
+   
+
+ 
+
+   

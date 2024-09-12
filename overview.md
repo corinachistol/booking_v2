@@ -145,3 +145,33 @@ BROWSER ---> res (HTML) <------- twig render('home.html.twig) <------ data <----
 |                                                     |                                       |
 |                                                     |                                     PDO['localhost']
 +-----------------------------------------------------+
+
+
+
+
+
+query parameter
+?page=...
+
+
+
+
+
+
+
+## lesson6  
+                        +------- renderhome(..)
+                       /
+    index.php  --------> ?
+                       \
+                        ^  +------- renderReviews(..)
+                        |   404
+                        | ----------> render404()
+                        |
+                        |
+                        router
+
+                    OPTIMIZATION:
+                     - url: ?page=reviews -> /reviews (url rewrite)
+                     + DRY: model 
+                     + DRY: view 
