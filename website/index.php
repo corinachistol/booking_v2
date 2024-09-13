@@ -3,42 +3,34 @@
 
    $page = $_GET['page'] ?? '';
 
-   //HW1: try to use switch/case - git branch with this code
-   // if($page === 'home') {
 
-   //    $tours = getData(data: 'tours');
-   //    $title = 'Our Fall Tours';
-   //    renderPage($title, 'home', $tours);
+   if($page === 'home') {
 
-   // } else if($page === 'reviews'){
+      $tours = getData(data: 'tours');
+      $title = 'Our Fall Tours';
+      renderPage($title, 'home', $tours);
 
-   //    $reviews = getData('reviews');
-   //    $title = 'What people think';
-   //    renderPage($title,'reviews', $reviews );
+   } else if($page === 'reviews'){
+
+      $reviews = getData('reviews');
+      $title = 'What people think';
+      renderPage($title,'reviews', $reviews );
       
-   // } else{
-      
-   //   renderPage("The page you are looking for was not found", '404');
-   // }
+   } elseif ($page === 'test'){
+      $tour = new Tour(11, 'New Tour from ORM', new Money(50, 'USD'));
+      $tour->save();
 
-   switch ($page) {
-      case 'home':
-         $tours = getData(data: 'tours');
-         $title = 'Our Fall Tours';
-         renderPage($title, 'home', $tours);
-         break;
-
-      case 'reviews':
-         $reviews = getData('reviews');
-         $title = 'What people think';
-         renderPage($title,'reviews', $reviews );
+   } elseif ($page === 'delete'){
+      $tours = getData("tours");
+      print_r($tours);
+      $tours = $tours->delete(3);
+   } 
+   else{
       
-         break;
-      
-      default:
-         renderPage("The page you are looking for was not found", '404');
-         break;
+     renderPage("The page you are looking for was not found", '404');
    }
+
+
 
 
 

@@ -175,3 +175,19 @@ query parameter
                      - url: ?page=reviews -> /reviews (url rewrite)
                      + DRY: model 
                      + DRY: view 
+
+
+
+
+
+
+
+## lesson7
+
+ORM ( Object Relational Mapper) / ODM / OGM 
+DDD (main driving design, key words= Domain / Entity (Modle))
+
+
+
+<app>                       <db>
+    Objects <--- map ---> DDL /DML

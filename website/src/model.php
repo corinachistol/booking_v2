@@ -6,7 +6,7 @@
         $info = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // var_dump($info);
       
-        return new Tour($info['id'], $info['title'], $info['price'], $info['currency']);
+        return new Tour($info['id'], $info['title'], $info['price']);
      }
 
  
@@ -67,7 +67,7 @@
             $stmt->execute([$this->id, $this->title, $amount, $currency]);
         }
 
-        public function delete($id) {
+        public function delete($id){
             global $pdo;
             $sql = 'DELETE FROM tours WHERE id=?';
             $stmt = $pdo->prepare($sql);

@@ -9,3 +9,7 @@ CREATE TABLE reviews (
     author_name VARCHAR(100),
     body VARCHAR (1000)
 );
+
+ALTER TABLE tours
+ADD currency VARCHAR(10)
+AFTER price;
