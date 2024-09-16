@@ -191,3 +191,6 @@ DDD (main driving design, key words= Domain / Entity (Modle))
 
 <app>                       <db>
     Objects <--- map ---> DDL /DML
+
+
+## lesson8a

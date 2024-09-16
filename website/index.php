@@ -23,7 +23,7 @@
    } elseif ($page === 'delete'){
       $tours = getData("tours");
       print_r($tours);
-      $tours = $tours->delete(3);
+      $tours->delete( 3);
    } 
    else{
       

@@ -1,6 +1,4 @@
 
-version: '3.4'
-
 services:
   php-container: 
     # image: php:8.3-apache
@@ -22,7 +20,7 @@ services:
 
   mariadb-container:
     container_name: booking_mariadb
-    image: mariadb
+    image: mariadb:10.11.9-jammy
     restart: 'no'
     environment:
       MARIADB_DATABASE: booking
