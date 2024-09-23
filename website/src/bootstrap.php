@@ -13,4 +13,4 @@
     ]);
 
     //DB init + config
-    $pdo = new PDO("mysql:host=booking_mariadb;port=3306;dbname=booking", "booking", "booking");
+    Model::$pdo = new PDO("mysql:host=booking_mariadb;port=3306;dbname=booking", "booking", "booking");

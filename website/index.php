@@ -3,32 +3,39 @@
 
    $page = $_GET['page'] ?? '';
 
+   // $deleted = Tour::delete(3);
 
-   if($page === 'home') {
+   $tour = Tour::getOne(15);
+   var_dump($tour);
 
-      $tours = getData(data: 'tours');
-      $title = 'Our Fall Tours';
-      renderPage($title, 'home', $tours);
 
-   } else if($page === 'reviews'){
+   // if($page === 'home') {
 
-      $reviews = getData('reviews');
-      $title = 'What people think';
-      renderPage($title,'reviews', $reviews );
+   //    $tours = Tour::getAll();
+   //    $title = 'Our Fall Tours';
+   //    renderPage($title, 'home', $tours);
+
+   // } else if($page === 'reviews'){
+
+   //    $reviews = Tour::getAll();
+   //    $title = 'What people think';
+   //    renderPage($title,'reviews', $reviews );
       
-   } elseif ($page === 'test'){
-      $tour = new Tour(11, 'New Tour from ORM', new Money(50, 'USD'));
-      $tour->save();
+   // } elseif ($page === 'test'){
+   //    $tour = new Tour(1, 'New Tour from ORM', new Money (50, 'MDL'));
+   //    $tour->save();
 
-   } elseif ($page === 'delete'){
-      $tours = getData("tours");
-      print_r($tours);
-      $tours->delete( 3);
-   } 
-   else{
+   // } elseif ($page === 'delete'){
+   //    $tour = Tour::delete(1);
+   //    // print_r($tour);
+    
       
-     renderPage("The page you are looking for was not found", '404');
-   }
+   //    // $tours->delete( 10);
+   // } 
+   // else{
+      
+   //   renderPage("The page you are looking for was not found", '404');
+   // }
 
 
 

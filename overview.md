@@ -194,3 +194,38 @@ DDD (main driving design, key words= Domain / Entity (Modle))
 
 
 ## lesson8a
++------------------------+
+|   Active Record        |
++------------------------+
+
+    1. model class : Tour
+            |
+        1.1 properties/methods
+        1.2 init
+        1.3 BREAD
+            |   |
+            |   +--- 1.3.A - save()
+            |
+            +--- ----1.3.B - getAll()
+
+        
+        dehydration
+    2. object -------> raw SQL 
+            hydration
+    3. object <------- raw results
+
+
+
+
+
+
+
+    Model(bootstrap)
+     ^   |
+     |   +-- $odi <------- new PDO(...)
+     |
+     +-- Tour
+     +-- Client
+     +-- REview
+
+
