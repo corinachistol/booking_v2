@@ -1,5 +1,9 @@
 <?
+ 
    require_once './src/bootstrap.php';
+
+   use Student\Booking\models\Tour;
+   use Student\Booking\models\Review;
 
    $page = $_GET['page'] ?? '';
 
@@ -22,7 +26,7 @@
       renderPage($title,'reviews', $reviews );
       
    } elseif ($page === 'test'){
-      $review = new Review(4, 'Author_nam', 'Review Body' );
+      $review = new Review(5, 'Author_name5', 'Review Body' );
       $review->save();
 
    } elseif ($page === 'delete'){

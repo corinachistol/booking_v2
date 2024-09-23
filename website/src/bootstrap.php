@@ -1,9 +1,15 @@
 <?
 
-    // initialization + configuration of main app parts
-    require_once './vendor/autoload.php';
-    require_once './src/model.php';
-    require_once './src/view.php';
+require_once './vendor/autoload.php';
+
+// initialization + configuration of main app parts
+use \Student\Booking\models\Model;
+
+// require_once './src/model.php';
+require_once './src/view.php';
+// require_once './src/models/Money.php';
+// require_once './src/models/Review.php';
+// require_once './src/models/Tour.php';
 
     //Twig init +  config
     $loader = new \Twig\Loader\FilesystemLoader('./templates');

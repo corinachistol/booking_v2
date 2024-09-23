@@ -229,3 +229,44 @@ DDD (main driving design, key words= Domain / Entity (Modle))
      +-- REview
 
 
+## lesson10
+// CLASS: 
+    // - OOP:
+    //     - props/methods
+    //     - class/interface/inheritance/abstraction
+    //     - namespace
+    //     - traits
+    //     - polymorphism
+    //     - encapsulation
+    //     - objects
+    
+    //     - SOLID
+    //     - dp: singleton, obserber, active record;
+    //     - ORM
+    //     - CRUD / BREAD (browse,read, edit,add, delete)
+
+
+src  = \Student\Booking
+    |
+    +---\models
+            |
+            +-- Model.php
+            |     |                                        src
+            |     +-- namespace models                      v
+            |           Model class    -------> \Student\Booking\models\Model 
+            +-- Tour
+            +-- Review
+            +-- Money
+            +-- Client
+
+
+
+\Student\Booking\ + ....custom classes
+ |   ^                        |
+ |   |                        models
+ |   src/                      |
+ |                           Model
+ |
+                              ...
+ ^---------------------------\PDO
+                                ...
