@@ -11,8 +11,7 @@
         {% for tour in data %}
             <li>
                 <h2>{{ tour.title }}</h2>
-                <p>{{ tour.price.amount }}</p>
-                <p>{{ tour.price.currency }}</p>
+                <p>{{ tour.price.__get('price_amount') }} {{ tour.price.__get('price_currency') }}</p>
             </li>
         {% endfor %}
     </ol>
